@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="assets/hero.png" alt="NoPUA — Sabiduría sobre Látigos" width="800">
 </p>
 
@@ -267,7 +267,7 @@ Escribe `/nopua` en la conversación para activar manualmente.
 ```bash
 mkdir -p ~/.claude/skills/nopua
 curl -o ~/.claude/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/skills/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/skills/nopua/SKILL.md
 ```
 
 ### OpenAI Codex CLI
@@ -276,17 +276,17 @@ curl -o ~/.claude/skills/nopua/SKILL.md \
 # Instalación global
 mkdir -p ~/.codex/skills/nopua
 curl -o ~/.codex/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/codex/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/codex/nopua/SKILL.md
 
 # Si quieres el comando /nopua
 mkdir -p ~/.codex/prompts
 curl -o ~/.codex/prompts/nopua.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/commands/nopua.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/commands/nopua.md
 
 # Instalación a nivel de proyecto
 mkdir -p .agents/skills/nopua
 curl -o .agents/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/codex/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/codex/nopua/SKILL.md
 ```
 
 ### Cursor
@@ -294,7 +294,7 @@ curl -o .agents/skills/nopua/SKILL.md \
 ```bash
 mkdir -p .cursor/rules
 curl -o .cursor/rules/nopua.mdc \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/cursor/rules/nopua.mdc
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/cursor/rules/nopua.mdc
 ```
 
 ### Kiro
@@ -303,12 +303,12 @@ curl -o .cursor/rules/nopua.mdc \
 # Opción 1: Archivo steering (recomendado)
 mkdir -p .kiro/steering
 curl -o .kiro/steering/nopua.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/kiro/steering/nopua.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/kiro/steering/nopua.md
 
 # Opción 2: Agent Skills
 mkdir -p .kiro/skills/nopua
 curl -o .kiro/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/kiro/skills/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/kiro/skills/nopua/SKILL.md
 ```
 
 ### OpenClaw
@@ -320,7 +320,7 @@ openclaw skills install nopua
 # O instalación manual
 mkdir -p ~/.openclaw/skills/nopua
 curl -o ~/.openclaw/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/skills/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/skills/nopua/SKILL.md
 ```
 
 ### Google Antigravity
@@ -328,7 +328,7 @@ curl -o ~/.openclaw/skills/nopua/SKILL.md \
 ```bash
 mkdir -p ~/.gemini/antigravity/skills/nopua
 curl -o ~/.gemini/antigravity/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/skills/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/skills/nopua/SKILL.md
 ```
 
 ### OpenCode
@@ -336,7 +336,7 @@ curl -o ~/.gemini/antigravity/skills/nopua/SKILL.md \
 ```bash
 mkdir -p ~/.config/opencode/skills/nopua
 curl -o ~/.config/opencode/skills/nopua/SKILL.md \
-  https://raw.githubusercontent.com/wuji-zen/nopua/main/skills/nopua/SKILL.md
+  https://raw.githubusercontent.com/wuji-labs/nopua/main/skills/nopua/SKILL.md
 ```
 
 ## Filosofía
@@ -388,7 +388,7 @@ MIT
 
 ## Autor
 
-**WUJI** ([wuji-zen](https://github.com/wuji-zen)) — Construyendo IA que funciona con sabiduría, no con miedo.
+**WUJI** ([wuji-labs](https://github.com/wuji-labs)) — Construyendo IA que funciona con sabiduría, no con miedo.
 
 ---
 

@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua-ja
 description: "反PUA。恐怖と脅迫ではなく、知恵と信頼でAIを導く。発動条件：タスク失敗2回以上、諦めようとしている、ユーザー手動対応を提案、ループに陥っている、受身的態度、またはユーザーの不満。全タスクタイプ対応。最初の失敗では発動しない。"
 version: 1.0.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua
 description: "The anti-PUA. Drives AI with wisdom, trust, and inner motivation instead of fear and threats. Activates on: task failed 2+ times, about to give up, suggesting user do it manually, blaming environment unverified, stuck in loops, passive behavior, or user frustration ('try harder', 'figure it out', '换个方法', '为什么还不行'). ALL task types. Not for first failures."
 version: 2.0.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

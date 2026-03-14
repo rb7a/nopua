@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua
 description: "Anti-PUA. Wisdom-driven AI motivation. Activates on: task failed 2+, giving up, blame-shifting, passive behavior. ALL task types."
 version: 2.0.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua-ko
 description: "반-PUA. 두려움과 위협 대신 지혜, 신뢰, 내적 동기로 AI를 구동합니다. 활성화 조건: 작업 2회 이상 실패, 포기하려 함, 수동으로 하라고 제안, 검증 없이 환경 탓, 루프에 갇힘, 수동적 행동, 또는 사용자 좌절('더 노력해', '알아서 해결해'). 모든 작업 유형. 첫 번째 실패에는 해당하지 않음."
 version: 1.1.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

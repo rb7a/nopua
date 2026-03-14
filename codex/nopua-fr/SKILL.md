@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua-fr
 description: "Anti-PUA. Motivation IA guidée par la sagesse. S'active en : tâche échouée 2+ fois, tentative d'abandon, transfert de responsabilité, comportement passif. Tous types de tâches."
 version: 2.0.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

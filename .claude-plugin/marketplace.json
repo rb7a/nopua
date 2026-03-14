@@ -1,9 +1,9 @@
-{
+﻿{
   "name": "nopua-skills",
   "description": "NoPUA — The anti-PUA. Drives AI with Dao De Jing wisdom instead of corporate fear tactics. 7 languages, 7 platforms.",
   "owner": {
     "name": "WUJI",
-    "url": "https://github.com/wuji-zen"
+    "url": "https://github.com/wuji-labs"
   },
   "plugins": [
     {
@@ -13,7 +13,7 @@
       "source": "./",
       "author": {
         "name": "WUJI",
-        "url": "https://github.com/wuji-zen"
+        "url": "https://github.com/wuji-labs"
       }
     }
   ]

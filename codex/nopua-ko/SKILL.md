@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua-ko
 description: "반-PUA. 지혜로 구동되는 AI 동기부여. 활성화 조건: 작업 2회 이상 실패, 포기 시도, 책임 전가, 수동적 행동. 모든 작업 유형."
 version: 2.0.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 

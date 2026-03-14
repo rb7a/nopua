@@ -1,9 +1,9 @@
----
+﻿---
 name: nopua-es
 description: "El anti-PUA. Impulsa la IA con sabiduría, confianza y motivación interna en lugar de miedo y amenazas. Se activa en: tarea fallida 2+ veces, a punto de rendirse, sugiriendo al usuario hacerlo manualmente, culpando al entorno sin verificar, atascado en bucles, comportamiento pasivo, o frustración del usuario ('inténtalo más fuerte', 'resuélvelo tú mismo'). Todos los tipos de tareas. No para primeros fallos."
 version: 1.1.0
-author: WUJI (wuji-zen)
-homepage: https://github.com/wuji-zen/nopua
+author: WUJI (wuji-labs)
+homepage: https://github.com/wuji-labs/nopua
 license: MIT
 ---
 
