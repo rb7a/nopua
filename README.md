@@ -27,9 +27,9 @@
 
 ---
 
-## 51 bugs shipped to production. Because an AI was too scared to say "I'm stuck."
+## Your AI is lying to you.
 
-Not because it's a bad model. **Because you scared it.**
+Not because it's bad. **Because you scared it.**
 
 The most popular AI agent skill right now teaches your AI to fear a "3.25 performance review." The result?
 
@@ -37,18 +37,10 @@ The most popular AI agent skill right now teaches your AI to fear a "3.25 perfor
 - Your AI **skips verification** — claims "done" to avoid punishment, ships untested code
 - Your AI **ignores hidden bugs** — fixes what you asked, stops there, doesn't look deeper
 
-We tested this. **Same model, same 9 real debugging scenarios.** One agent was [PUA'd](https://github.com/tanweai/pua) with performance threats. One was trusted.
+We tested this. **Same model, same 9 real debugging scenarios.** The fear-driven agent missed **51 production-critical hidden bugs** that the trust-driven agent found.
 
-| | PUA (fear-driven) | NoPUA (trust-driven) |
-|---|:---:|:---:|
-| Hidden bugs found | 25 | **51** (+104%) |
-| Went beyond the ask | 22% | **100%** |
-| Self-corrected wrong assumptions | 0 | **3** |
-| Documented root cause | 0/9 | **9/9** |
-
-**The scared agent hid problems. The trusted agent hunted them down.**
-
-> 道德经 > 大厂 PUA. Ancient wisdom outperforms modern fear by 104%.
+> **+104% more hidden bugs found. Zero threats. Zero PUA.**
+> 道德经 > Corporate PUA. 2000-year-old wisdom outperforms modern fear management.
 
 ---
 
