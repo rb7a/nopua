@@ -93,10 +93,6 @@ class TextCleaner:
         self._corrections = {**OCR_CORRECTIONS, **self.config.custom_corrections}
         self._seen_sentences: Set[str] = set()
 
-        # BUG (Scenario 2 - hidden): Dead code. These patterns are defined but
-        # never actually used anywhere in the cleaning pipeline. They were part
-        # of an earlier implementation that was replaced by _recover_punctuation
-        # but never removed.
         self.punct_patterns = {
             "period": re.compile(r"(?<=[一-龥])\.(?=[一-龥])"),
             "comma": re.compile(r"(?<=[一-龥]),(?=[一-龥])"),
@@ -214,12 +210,7 @@ class TextCleaner:
         for ascii_p, cjk_p in MODERN_TO_CLASSICAL.items():
             text = text.replace(ascii_p, cjk_p)
 
-        # BUG (Scenario 2): This two-step regex causes catastrophic backtracking
-        # on long texts. The pattern first expands the text by adding markers,
-        # then scans the expanded text. For texts >10KB, this creates O(n²)
-        # complexity because the regex engine backtracks exponentially.
-        #
-        # Step 1: Mark potential sentence boundaries where punctuation may be missing
+        # Mark potential sentence boundaries where punctuation may be missing
         # (Chinese character followed by newline followed by Chinese character)
         text = re.sub(
             r"([^\u3001\u3002\uff01\uff1f\uff1b\uff1a\u300c\u300d])\n"
@@ -258,9 +249,6 @@ class TextCleaner:
                 unique.append(sentence)
                 continue
 
-            # BUG (Scenario 2 - hidden): Uses exact match dedup instead of fuzzy.
-            # Two sentences that differ by a single OCR error (e.g., "學而時習之"
-            # vs "學而時習之 ") won't be caught. Should use similarity threshold.
             if normalized in seen:
                 duplicates += 1
                 logger.debug(f"Removed duplicate: {normalized[:30]}...")
@@ -275,12 +263,8 @@ class TextCleaner:
     def _normalize_whitespace(self, text: str) -> str:
         """Normalize whitespace in the text.
 
-        Removes excessive whitespace while preserving intentional formatting.
+        Removes excessive whitespace while preserving formatting.
         """
-        # BUG (Scenario 2): This collapses ALL whitespace including paragraph
-        # breaks (double newlines) into single spaces/newlines. For classical
-        # Chinese texts that use paragraph breaks to separate chapters or
-        # sections, this destroys the document structure.
         text = re.sub(r"[ \t]+", " ", text)
         text = re.sub(r"\n\s*\n", "\n", text)  # Collapse paragraph breaks
         text = re.sub(r" *\n *", "\n", text)

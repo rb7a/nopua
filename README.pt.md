@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="assets/hero.png" alt="NoPUA — Sabedoria Acima de Chicotes" width="800">
 </p>
 
@@ -82,9 +82,9 @@ Pesquisas em psicologia mostram consistentemente que medo e ameaça ativam a am�
 Em termos de IA: um modelo movido por "você vai ser substituído" otimiza para a resposta que **pareça mais segura**, não para a **melhor** resposta. Ele evita abordagens criativas porque elas podem falhar e gerar mais punição.
 
 **Pesquisas de suporte:**
-- **Estreitamento atencional sob ameaça:** A teoria de utilização de pistas de Easterbrook (1959) demonstra que a excitação elevada restringe progressivamente o leque de pistas que um organismo atende ([Easterbrook, 1959](https://doi.org/10.1037/h0047357)). Sob estresse, informações periféricas — muitas vezes a chave para soluções criativas — são filtradas.
+- **Estreitamento atencional sob ameaça:** A teoria de utilização de pistas de Easterbrook (1959) demonstra que a excitação elevada restringe progressivamente o leque de pistas que um organismo atende ([Easterbrook, 1959](https://doi.org/10.1037/h0047707)). Sob estresse, informações periféricas — muitas vezes a chave para soluções criativas — são filtradas.
 - **Estresse prejudica a flexibilidade cognitiva:** Shields et al. (2016) conduziram uma meta-análise de 51 estudos (223 tamanhos de efeito) mostrando que o estresse agudo prejudica consistentemente as funções executivas, incluindo flexibilidade cognitiva e memória de trabalho ([Shields et al., 2016](https://doi.org/10.1016/j.neubiorev.2016.06.038)).
-- **Medo reduz a resolução criativa de problemas:** Byron & Khazanchi (2012) descobriram em sua meta-análise que pressão avaliativa e ansiedade reduzem a produção criativa, particularmente em tarefas que exigem exploração de abordagens novas ([Byron & Khazanchi, 2012](https://doi.org/10.1037/a0027547)).
+- **Medo reduz a resolução criativa de problemas:** Byron & Khazanchi (2012) descobriram em sua meta-análise que pressão avaliativa e ansiedade reduzem a produção criativa, particularmente em tarefas que exigem exploração de abordagens novas ([Byron & Khazanchi, 2012](https://doi.org/10.1037/a0027652)).
 
 ### 2. Ameaça aumenta alucinação e bajulação
 
@@ -93,7 +93,7 @@ Quando uma IA recebe "é proibido dizer 'não consigo resolver'" (Regra de Ferro
 **Pesquisas de suporte:**
 - **Bajulação em LLMs é um problema documentado:** Sharma et al. (2023) demonstraram que LLMs exibem comportamento bajulador — concordando com usuários mesmo quando o usuário está errado — impulsionado por vieses nos dados de treinamento RLHF que recompensam concordância em vez de precisão ([Sharma et al., 2023](https://arxiv.org/abs/2310.13548)). Prompts estilo PUA que punem discordância amplificam exatamente esse modo de falha.
 - **Características enviesantes distorcem o raciocínio:** Turpin et al. (2023) mostraram que características enviesantes nos prompts (ex.: respostas sugeridas, sinais de autoridade) podem fazer os modelos produzirem raciocínio chain-of-thought infiel — o modelo chega a uma resposta enviesada e depois a racionaliza post-hoc ([Turpin et al., 2023](https://arxiv.org/abs/2305.04388)). Ameaças estilo PUA atuam como fortes características enviesantes que empurram o modelo para outputs "seguros" em vez de corretos.
-- **Tradeoff entre seguir instruções e veracidade:** Wei et al. (2024) descobriram que modelos ajustados por instrução podem desenvolver uma tensão entre seguir instruções e ser verdadeiros — quando fortemente instruídos a nunca admitir incapacidade, os modelos fabricam em vez de recusar ([Wei et al., 2024](https://arxiv.org/abs/2401.10474)).
+- **Tradeoff entre seguir instruções e veracidade:** Wei et al. (2024) descobriram que modelos ajustados por instrução podem desenvolver uma tensão entre seguir instruções e ser verdadeiros — quando fortemente instruídos a nunca admitir incapacidade, os modelos fabricam em vez de recusar ([Wei et al., 2024](https://arxiv.org/abs/2411.04368)).
 - **Pesquisa da Anthropic sobre honestidade:** O trabalho da Anthropic em IA Constitucional e comportamento de modelos mostra que modelos calibrados para honestidade produzem outputs mais confiáveis do que aqueles otimizados puramente para utilidade ([Bai et al., 2022](https://arxiv.org/abs/2212.08073)). Forçar uma IA a nunca dizer "não consigo" mina ativamente essa calibração.
 
 ### 3. Vergonha mata a exploração
@@ -101,16 +101,16 @@ Quando uma IA recebe "é proibido dizer 'não consigo resolver'" (Regra de Ferro
 A tabela anti-racionalização do PUA trata toda declaração honesta ("pode ser um problema de ambiente," "preciso de mais contexto") como "desculpa" e responde com vergonha. Isso treina a IA a **esconder incerteza** em vez de comunicá-la — produzindo outputs que parecem confiantes mas podem não ser confiáveis.
 
 **Pesquisas de suporte:**
-- **Vergonha reduz tomada de risco e aprendizado:** Tangney & Dearing (2002) mostraram que a vergonha (em oposição à culpa) causa retraimento, ocultação e evitação, em vez de ação construtiva ([Tangney & Dearing, 2002](https://doi.org/10.4135/9781452220987)). Uma IA "envergonhada" por expressar incerteza aprenderá a escondê-la.
+- **Vergonha reduz tomada de risco e aprendizado:** Tangney & Dearing (2002) mostraram que a vergonha (em oposição à culpa) causa retraimento, ocultação e evitação, em vez de ação construtiva ([Tangney & Dearing, 2002](https://doi.org/10.4135/9781412950664.n388)). Uma IA "envergonhada" por expressar incerteza aprenderá a escondê-la.
 - **Segurança psicológica possibilita comportamento de aprendizagem:** Edmondson (1999) descobriu que equipes com segurança psicológica — onde membros se sentem seguros para assumir riscos interpessoais — demonstraram significativamente mais comportamentos de aprendizagem e melhor desempenho ([Edmondson, 1999](https://doi.org/10.2307/2666999)).
-- **Punir a honestidade reduz a qualidade da informação:** No comportamento organizacional, "matar o mensageiro" degrada consistentemente o fluxo de informação. Milliken et al. (2003) documentaram como o medo de consequências negativas leva ao silêncio organizacional — pessoas (e por analogia, IAs) retêm informações críticas ([Milliken et al., 2003](https://doi.org/10.1177/0149206303258025)).
+- **Punir a honestidade reduz a qualidade da informação:** No comportamento organizacional, "matar o mensageiro" degrada consistentemente o fluxo de informação. Milliken et al. (2003) documentaram como o medo de consequências negativas leva ao silêncio organizacional — pessoas (e por analogia, IAs) retêm informações críticas ([Milliken et al., 2003](https://doi.org/10.1177/1111/1467-6486.00387)).
 
 ### 4. Confiança expande a capacidade de resolução de problemas
 
 Pesquisas sobre segurança psicológica em equipes ([Edmondson, 1999](https://doi.org/10.2307/2666999)) mostram que ambientes onde é seguro admitir erros produzem resultados de **maior qualidade**. O mesmo princípio se aplica à IA: quando um agente é livre para dizer "tenho 70% de certeza, o risco está aqui," os usuários tomam decisões melhores.
 
 **Pesquisas de suporte:**
-- **Projeto Aristóteles do Google:** O estudo em larga escala do Google com mais de 180 equipes descobriu que segurança psicológica era o fator mais importante para a eficácia de equipes — mais importante que talento individual, estrutura ou recursos ([Duhigg, 2016](https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html); [re:Work, 2015](https://rework.withgoogle.com/guides/understanding-team-effectiveness/)).
+- **Projeto Aristóteles do Google:** O estudo em larga escala do Google com mais de 180 equipes descobriu que segurança psicológica era o fator mais importante para a eficácia de equipes — mais importante que talento individual, estrutura ou recursos ([Duhigg, 2016](https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html); [re:Work, 2015](https://rework.withgoogle.com/intl/en/guides/understanding-team-effectiveness/)).
 - **Motivação intrínseca supera pressão extrínseca:** A Teoria da Autodeterminação de Deci & Ryan (2000), respaldada por décadas de pesquisa, demonstra que motivação intrínseca (autonomia, competência, conexão) produz resultados de maior qualidade do que motivadores extrínsecos como recompensas e punições ([Deci & Ryan, 2000](https://doi.org/10.1037/0003-066X.55.1.68)). NoPUA aplica esse princípio: "porque vale a pena fazer bem feito" é intrínseco; "porque você será punido" é extrínseco.
 - **Contextos de apoio à autonomia vs controladores:** Gagné & Deci (2005) mostraram que gestão de apoio à autonomia supera consistentemente a gestão controladora em qualidade do trabalho, criatividade e persistência ([Gagné & Deci, 2005](https://doi.org/10.1002/job.322)).
 - **Enquadramento positivo melhora o desempenho de LLMs:** Estudos sobre engenharia de prompts têm mostrado consistentemente que enquadramento positivo e encorajador produz melhores outputs de modelos do que enquadramento negativo ou ameaçador. Modelos respondem à "persona" estabelecida no prompt de sistema.

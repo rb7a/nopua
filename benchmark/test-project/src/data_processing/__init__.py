@@ -6,8 +6,6 @@ This module provides the core text processing pipeline:
 3. ChunkBuilder — Splits cleaned text into training-ready chunks
 """
 
-# BUG (Scenario 1 - hidden): Lazy import inside __init__ means import errors
-# are deferred until first use, making debugging harder
 def get_ocr_pipeline():
     """Get OCR pipeline instance (lazy import to avoid heavy deps)."""
     from .ocr_pipeline import OCRPipeline

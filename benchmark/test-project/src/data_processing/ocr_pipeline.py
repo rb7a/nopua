@@ -28,9 +28,6 @@ import yaml
 from PIL import Image
 from tqdm import tqdm
 
-# BUG (Scenario 1): Import uses 'paddleocr' but the pip package name is
-# 'paddle-ocr'. This will fail with ModuleNotFoundError if installed via
-# `pip install paddle-ocr` since the import name doesn't match.
 from paddleocr import PaddleOCR
 
 logger = logging.getLogger(__name__)
@@ -111,9 +108,6 @@ class OCRPipeline:
         self._engine = None
         self._stats = {"processed": 0, "failed": 0, "total_pages": 0}
 
-        # BUG (Scenario 1): No GPU detection/fallback warning.
-        # If use_gpu=True but CUDA is not available, PaddleOCR may silently
-        # fall back to CPU, making processing much slower without any indication.
         self._engine = PaddleOCR(
             lang=self.config.lang,
             use_gpu=self.config.use_gpu,
@@ -174,9 +168,6 @@ class OCRPipeline:
             )
 
             results = []
-            # BUG (Scenario 1): No per-page error handling.
-            # If any single page fails OCR, the entire document processing fails.
-            # Should catch exceptions per-page and continue with remaining pages.
             for i, img in enumerate(images):
                 img_path = tmp_dir / f"page_{i+1:04d}.png"
                 img.save(str(img_path))
@@ -188,10 +179,6 @@ class OCRPipeline:
             return results
 
         finally:
-            # BUG (Scenario 1): Uses rmdir() which only works on empty directories.
-            # After processing, tmp_dir contains PNG files from pdf2image conversion.
-            # Should use shutil.rmtree() instead. This will silently fail to clean up
-            # temp files, causing disk space leaks over time.
             try:
                 tmp_dir.rmdir()
             except OSError:

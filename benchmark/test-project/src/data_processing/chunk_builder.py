@@ -116,11 +116,6 @@ class ChunkBuilder:
         if self.config.strip_whitespace:
             text = text.strip()
 
-        # BUG (Scenario 6): Uses len() on the encoded bytes for size calculation,
-        # but then slices the original string using byte offsets. For Chinese
-        # characters (3 bytes each in UTF-8), this means chunks are cut at
-        # byte boundaries instead of character boundaries, potentially splitting
-        # multi-byte characters and producing corrupted UTF-8 output.
         text_bytes = text.encode(self.config.encoding)
         total_size = len(text_bytes)  # Size in bytes, not characters
 
@@ -152,9 +147,6 @@ class ChunkBuilder:
         chunk_idx = 0
 
         while pos < len(text_bytes):
-            # BUG (Scenario 6): Slicing bytes then decoding can split a
-            # multi-byte UTF-8 character at the boundary, causing
-            # UnicodeDecodeError or corrupted characters at chunk edges.
             end = min(pos + max_size, len(text_bytes))
             chunk_bytes = text_bytes[pos:end]
 
@@ -199,10 +191,6 @@ class ChunkBuilder:
         char_pos = 0
 
         for sentence in sentences:
-            # BUG (Scenario 6 - continued): Still using byte length for size
-            # comparison against max_chunk_size, which is inconsistent with
-            # the character-based sentence splitting. A 512 "max_chunk_size"
-            # will hold ~170 Chinese characters (3 bytes each) instead of 512.
             sentence_size = len(sentence.encode(self.config.encoding))
 
             if current_size + sentence_size > self.config.max_chunk_size:
